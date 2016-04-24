@@ -42,4 +42,8 @@ install:
 	make -C ./demo install 
 	make -C ./lib install
 
+exec: all
+	export LD_LIBRARY_PATH=$(PWD)/lib/
+	make exec -C ./demo/matrix-fast-gpio/
+
 .PHONY: $(PHONY) install clean distclean
