@@ -1,4 +1,4 @@
-CROSS_COMPILE ?=
+CROSS_COMPILE ?= arm-linux-gnueabihf-
 ifeq ($(CROSS_COMPILE),)
 $(error "Not set CROSS_COMPILE=";)
 endif
@@ -6,7 +6,8 @@ endif
 AS			= $(CROSS_COMPILE)as
 LD			= $(CROSS_COMPILE)ld
 CC			= $(CROSS_COMPILE)gcc
-AR			= $(CROSS_COMPILE)ar
+# AR			= $(CROSS_COMPILE)ar
+AR			= ar
 NM			= $(CROSS_COMPILE)nm
 STRIP		= $(CROSS_COMPILE)strip
 OBJCOPY		= $(CROSS_COMPILE)objcopy
